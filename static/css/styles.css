@@ -1,0 +1,92 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 20% 80%; /* 20% for player list, 80% for right side */
+    height: 100vh;
+}
+
+.player-list {
+    background-color: #2e7d32;
+    color: white;
+    padding: 10px;
+    overflow-y: auto; /* Make the player list scrollable */
+}
+
+.right-panel {
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px; /* Padding on the sides */
+}
+
+.header {
+    background-color: #d32f2f;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    flex: 0 0 100px; /* Fixed height for the header */
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 30% 40% 30%; /* 3 columns: first, second, third */
+    grid-template-rows: auto; /* Auto rows */
+    gap: 10px; /* Space between columns */
+    flex: 1;
+}
+
+.first-column {
+    display: grid;
+    grid-template-rows: 30% 70%; /* Two rows: Potential (30%), Data Viz 1 (70%) */
+    gap: 10px; /* Space between rows */
+}
+
+.potential {
+    background-color: #f9a825;
+    color: white;
+    padding: 10px;
+}
+
+.data-viz-1 {
+    background-color: #81c784;
+    color: white;
+    padding: 10px;
+}
+
+.second-column {
+    display: flex;
+}
+
+.data-viz-2 {
+    background-color: #7b1fa2;
+    color: white;
+    padding: 10px;
+    flex: 1; /* Take full height */
+}
+
+.third-column {
+    display: grid;
+    grid-template-rows: 50% 50%; /* Similar Players and Game List each take 50% */
+    gap: 10px; /* Space between rows */
+}
+
+.similar-players {
+    background-color: #90caf9;
+    color: white;
+    padding: 10px;
+}
+
+.game-list {
+    background-color: #ce93d8;
+    color: white;
+    padding: 10px;
+}
